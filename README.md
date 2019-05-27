@@ -15,6 +15,8 @@ List of (online) demos and code examples as collected and created during the "WF
 
 ## Support
 Geonovum and PDOK provide support during the week using:
-1. Gitter
-1. Github 
-
+1. [Gitter: wfs3-experiments](https://gitter.im/Geonovum/wfs3-experiments)
+1. Github:
+ 1. issues: e.g. on the specification and/or research topics
+ 1. Pull Requests (PRs): for changes to the documentation, listing results / demos
+ 1.
