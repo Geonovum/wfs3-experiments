@@ -28,9 +28,10 @@ In Dutch (TODO: translate):
    1. Online platformen (ArcGIS?)
 1. testen van interoperabiliteit: verschillende servers aanroepen met 1 client en 1 server aanroepen met verschillende clients.
 1. Hoe eenvoudig kan je wfs3 operaties mixen met andere API calls? Demo (laten) maken van een service met generieke WFS3 operaties en specifieke operaties.
-1. Hoe eenvoudig kan je bulk downloads doen via WFS 3? Is WFS3 daar uberhaupt geschikt voor?
+   1. Welke aanpassingen zouden nodig zijn om WFS3 als INSPIRE Download Service in te zetten?
+1. Hoe eenvoudig kan je bulk downloads doen via WFS 3 (denk ook aan INSPIRE verplichtingen)? Is WFS3 daar uberhaupt geschikt voor?
 1. kunnen niet-geo ontwikkelaars uit de voeten met WFS 3, via OpenAPI?
-1. Hoe ga je om met complexere datastructuren (zoals nesting en meervoudige attributen)
+1. Hoe ga je om met complexere datastructuren (zoals nesting en meervoudige attributen, INSPIRE modellen)
    1. in de (Geo)JSON en HTML output?
    1. in de requests ondersteuning nodig (denk aan filtering)?
 1. Meer dimensies, 3D:
