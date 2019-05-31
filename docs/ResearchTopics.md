@@ -6,36 +6,45 @@ Suggested research topics for the WFS3 Werkweek are:
 2. access and use WFS3 API through:
    1. well known geospatial clients
    2. regular / non-spatial applications
+1. Are WFS 3 the and NL APIs strategy compatible or do you still run into problems if you implement both ?
+1. Does the CRS extension work?
+   1. How to handle CRS notation?
+   2. Which CRSs could / should a WFS 3 implementation handle?
 
-In Dutch (TODO: translate):
+1. Are there specific performance problems with the API? Are there implementation choices that can help a WFS3 API be performant?
 
-1. Zijn WFS 3 en NL API strategie compatibel of loop je nog tegen dingen aan als je echt gaat implementeren?
-1. Werkt de CRS extensie?
-   1. hoe omgaan met notatie van CRS?
-   1. Welke CRSen zou een WFS 3 implementatie kunnen / moeten ondersteunen?
-1. Zijn er specifieke performance problemen / hoe is een WFS3 API met goede performance te maken?
-1. Welke mogelijkheden mis je in de Core?
-   1. welke functies worden gemist in WFS3? Algemeen en specifiek voor Nederlandse toepassingen?
-1. Lukt het indexeren in Google?
-   1. HTML output van de service en van de data: is dit door Google te indexeren
-   1. kunnen WFS3 collections ook als Google dataset worden aangemeld (bijvoorbeeld door schema.org elementen op te nemen in de HTML output van de service)?
-1. Linked data toepassen, hoe?
-   1. in hoeverre gaan Linked Data en WFS 3 samen? Kan je door output aan te passen al eenvoudig Linked Data (via bijv JSON-LD) produceren? Wat zijn mogelijkheden en beperkingen?
-1. Wat vinden mensen ervan om ermee te werken?
-1. hoe snel / goed is WFS3 in te bouwen in geo-clients?
-   1. Voor web: OpenLayers en/of LeafletJS, ...
-   1. voor desktop QGIS en/of gebruik van GDAL
-   1. Online platformen (ArcGIS?)
-1. testen van interoperabiliteit: verschillende servers aanroepen met 1 client en 1 server aanroepen met verschillende clients.
-1. Hoe eenvoudig kan je wfs3 operaties mixen met andere API calls? Demo (laten) maken van een service met generieke WFS3 operaties en specifieke operaties.
-   1. Welke aanpassingen zouden nodig zijn om WFS3 als INSPIRE Download Service in te zetten?
-1. Hoe eenvoudig kan je bulk downloads doen via WFS 3 (denk ook aan INSPIRE verplichtingen)? Is WFS3 daar uberhaupt geschikt voor?
-1. kunnen niet-geo ontwikkelaars uit de voeten met WFS 3, via OpenAPI?
-1. Hoe ga je om met complexere datastructuren (zoals nesting en meervoudige attributen, INSPIRE modellen)
-   1. in de (Geo)JSON en HTML output?
-   1. in de requests ondersteuning nodig (denk aan filtering)?
-1. Meer dimensies, 3D:
-   1. als outputformaat
-   1. wat is nodig aan onderstuning in requests?
+1. What options do you miss in the Core?
+   1. What functionality is missing in WFS3? General and specific for Dutch applications?
 
-1. tijd / 4D: multidimensionaal: hoe kan je WFS3 gebruiken om tijdselementen in te bouwen?
+1. Will the indexing work in Google?
+   1. HTML output of the service and of the data: can this be indexed by Google?
+   2. Can WFS3 collections also be registered as a Google dataset (for example by including schema.org elements in the HTML output of the service)?
+
+1. Apply Linked Data, how?
+   1. To what extent do Linked Data and WFS 3 go together? Can you easily produce Linked Data (via JSON-LD, for example) by adjusting the output? What are the possibilities and limitations?
+   
+1. What do people think about working with it?
+
+1. how fast / good can WFS3 be integrated into geo-clients?
+   1. For web: OpenLayers and / or LeafletJS, ...
+   2. For desktop QGIS and / or via GDAL
+   3. Online platforms (ArcGIS?)
+
+1. Interoperability testing: calling different servers with 1 client and calling 1 server with different clients.
+
+1. How easy can you mix WFS 3 operations with other API calls? Demo (let) make a service with generic WFS3 operations and specific operations.
+   1. What  changes would be needed to use WFS3 as an INSPIRE Download Service?
+
+1. How easily can you do bulk downloads via WFS 3 (also consider INSPIRE obligations)? Is WFS3 suitable for that at all?
+
+1. Can non-geo developers handle WFS 3 via OpenAPI?
+
+1. How do you deal with more complex data structures (such as nesting and multiple attributes, INSPIRE models)
+    1. in the (Geo) JSON and HTML output?
+    2. need for support in the requests (e.g. for filtering)?
+
+1. More dimensions, 3D:
+    1. as an output format
+    2. what is needed for support in requests?
+
+2. time / 4D: multidimensional: how can you use WFS3 to build in time elements?
