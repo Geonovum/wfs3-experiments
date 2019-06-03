@@ -16,13 +16,14 @@ Suggested research topics for the WFS3 Werkweek are:
 1. What options do you miss in the Core?
    1. What functionality is missing in WFS3? General and specific for Dutch applications?
 
-1. Will the indexing work in Google?
+1. Will indexing work in Google?
    1. HTML output of the service and of the data: can this be indexed by Google?
-   2. Can WFS3 collections also be registered as a Google dataset (for example by including schema.org elements in the HTML output of the service)?
+   2. *Can WFS3 collections also be registered as a Google dataset (for example by including schema.org elements in the HTML output of the service)?* -> [Succesfully implemented](https://github.com/Geonovum/wfs3-experiments/blob/master/docs/Experiments.md#searching-datasets-and-apis)
+
 
 1. Apply Linked Data, how?
    1. To what extent do Linked Data and WFS 3 go together? Can you easily produce Linked Data (via JSON-LD, for example) by adjusting the output? What are the possibilities and limitations?
-   
+
 1. What do people think about working with it?
 
 1. how fast / good can WFS3 be integrated into geo-clients?
