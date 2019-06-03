@@ -35,6 +35,7 @@ Suggested research topics for the WFS3 Werkweek are:
 
 1. How easy can you mix WFS 3 operations with other API calls? Demo (let) make a service with generic WFS3 operations and specific operations.
    1. What  changes would be needed to use WFS3 as an INSPIRE Download Service?
+   1. what about existing APIs, like: [https://bag.basisregistraties.overheid.nl/restful-api](https://bag.basisregistraties.overheid.nl/restful-api) ? And can we get lessons learned from creating this API?
 
 1. How easily can you do bulk downloads via WFS 3 (also consider INSPIRE obligations)? Is WFS3 suitable for that at all?
 
