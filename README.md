@@ -27,3 +27,5 @@ Kickoff webinar was on Monday 3rd of June 10:00-11:00AM.
 - SDI.Next background by Linda van den Brink [[slides](https://github.com/Geonovum/wfs3-experiments/blob/master/slides/kickoff/20190603-Kickoff-intro-SDINext-WFS3.pdf)]
 - WFS 3.0 stoomcursus [[slides](https://github.com/Geonovum/wfs3-experiments/blob/master/slides/kickoff/20190603-WFS3-stoomcursus.pdf)]
 - [Minutes](https://github.com/Geonovum/wfs3-experiments/blob/master/docs/KickoffMinutes.md)
+
+test
