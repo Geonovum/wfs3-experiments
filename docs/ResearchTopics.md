@@ -43,6 +43,7 @@ Suggested research topics for the WFS3 Werkweek are:
 1. How do you deal with more complex data structures (such as nesting and multiple attributes, INSPIRE models)
     1. in the (Geo) JSON and HTML output?
     2. need for support in the requests (e.g. for filtering)?
+    - input: [OGC Engineering report](https://docs.opengeospatial.org/per/18-021.html) on this topic
 
 1. More dimensions, 3D:
     1. as an output format
