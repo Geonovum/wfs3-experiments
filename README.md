@@ -8,7 +8,7 @@ This repository contains the results of the WFS3 experiments coming out of the "
 See [docs/ResearchTopics.md](docs/ResearchTopics.md) for the list of research topics.
 
 ## Experiments
-[docs/Experiments.md](Experiments.md) : list of (online) demos, code examples and documentation of experiments as collected and created during the "WFS3 werkweek".
+[docs/Experiments.md](docs/Experiments.md) : list of (online) demos, code examples and documentation of experiments as collected and created during the "WFS3 werkweek".
 
 ## References
 1. [WFS 3 / OGC API specification](https://github.com/opengeospatial/WFS_FES/)
