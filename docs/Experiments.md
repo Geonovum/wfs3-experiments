@@ -13,6 +13,9 @@ These API implementations can be used for experiments:
 ## Clients
 See [Clients.md](Clients.md) for experiences and findings on using OGC API Features implementations in clients.
 
+## Different CRSses
+The core of the API specification only supports WGS84. Work has been done already on an extension to support different CRSses. In the document [CRS.md](CRS.md) we collect results on experiments with different CRSses.
+
 ## Adding results
 If you'd like to add a reference, just let us know through [Gitter](https://gitter.im/Geonovum/wfs3-experiments) or a Pull Request.
 If you need some more documentation space, please create a Markdown document and create a PullRequest to add it to this repository (in the ```docs``` folder).
