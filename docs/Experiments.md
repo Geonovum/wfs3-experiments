@@ -1,20 +1,13 @@
 # Experiments WFS3 werkweek
 This document collects results of experiments performed during the "WFS3 werkweek".
 
-## API implementations
-These API implementations can be used for experiments:
-* (temporary) demo api on Dutch BGT (large scale topography) data subset of the town of Swifterbant (JSON only): [http://52.166.65.213/test/bgt/wfs/3.0](http://52.166.65.213/test/bgt/wfs/3.0).  Github repository: [https://github.com/PDOK/wfs-3.0](https://github.com/PDOK/wfs-3.0)
-* Geonovum demo API INSPIRElab: [http://inspirelab.geonovum.nl/test/wfs3](http://inspirelab.geonovum.nl/test/wfs3), including addresses in Swifterbant. Geoserver 2.15, including WFS3 plugin (community module)
-* [Pygeoapi](https://pygeoapi.io/) demo website: [https://demo.pygeoapi.io](https://demo.pygeoapi.io). Service via  https://demo.pygeoapi.io/master . Includes WFSv2 proxy to PDOK and RCE WFSs.
-
-## Searching datasets and APIs
-* [Search Engine Optimization (pygeoapi)](https://github.com/geopython/pygeoapi/wiki/SEO)
-
-## Clients
-See [Clients.md](Clients.md) for experiences and findings on using OGC API Features implementations in clients.
-
-## Different CRSses
-The core of the API specification only supports WGS84. Work has been done already on an extension to support different CRSses. In the document [CRS.md](CRS.md) we collect results on experiments with different CRSses.
+## Topics
+* [API implementations](APIimplementations.md)
+* [Searching datasets and APIs](#Search.md)
+* [Clients](Clients.md)
+* [CRS](CRS.md)
+* [Linked Data](LinkedData.md)
+* [Adding results](#adding-results)
 
 ## Adding results
 If you'd like to add a reference, just let us know through [Gitter](https://gitter.im/Geonovum/wfs3-experiments) or a Pull Request.
