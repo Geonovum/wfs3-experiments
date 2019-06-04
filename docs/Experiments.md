@@ -3,7 +3,7 @@ This document collects results of experiments performed during the "WFS3 werkwee
 
 ## Topics
 * [API implementations](APIimplementations.md)
-* [Searching datasets and APIs](#Search.md)
+* [Searching datasets and APIs](Search.md)
 * [Clients](Clients.md)
 * [CRS](CRS.md)
 * [Linked Data](LinkedData.md)
