@@ -11,7 +11,7 @@ These API implementations can be used for experiments:
 * [Search Engine Optimization (pygeoapi)](https://github.com/geopython/pygeoapi/wiki/SEO)
 
 ## Clients
-See [docs/Clients.md](docs/Clients.md) for experiences and findings on using OGC API Features implementations in clients.
+See [Clients.md](Clients.md) for experiences and findings on using OGC API Features implementations in clients.
 
 ## Adding results
 If you'd like to add a reference, just let us know through [Gitter](https://gitter.im/Geonovum/wfs3-experiments) or a Pull Request.
