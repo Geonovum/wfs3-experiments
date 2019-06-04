@@ -7,6 +7,7 @@ This document collects results of experiments performed during the "WFS3 werkwee
 * [Clients](Clients.md)
 * [CRS](CRS.md)
 * [Linked Data](LinkedData.md)
+* [INSPIRE Download Service](INSPIREDownloadService.md)
 * [Adding results](#adding-results)
 
 ## Adding results
