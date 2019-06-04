@@ -1,5 +1,7 @@
 # LinkedData in OGC API Features
 
+It has not yet been addressed in the Core of WFS3. See [WFS_FES issue 167](https://github.com/opengeospatial/WFS_FES/issues/167).
+
 ## Existing implementations
 By @jorgejesus: research project on methods for linked data and JSON schema and JOSN-LD in WFS3, to provide soil profilesfor ISRIC. Based on Pygeoapi. Instance: https://glosis.isric.org, sources https://github.com/jorgejesus/GLOSIS.
 
