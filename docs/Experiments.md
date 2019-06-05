@@ -8,6 +8,7 @@ This document collects results of experiments performed during the "WFS3 werkwee
 * [CRS](CRS.md)
 * [Linked Data](LinkedData.md)
 * [INSPIRE Download Service](INSPIREDownloadService.md)
+* [Security](Security.md)
 * [Adding results](#adding-results)
 
 ## Adding results
