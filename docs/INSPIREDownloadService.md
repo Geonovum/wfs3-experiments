@@ -11,6 +11,7 @@ Topics that need some extra attention are:
 1. [Download entire dataset](#download-entire-dataset)
 1. [Spatial dataset identifier as collectionId](#spatial-dataset-identifier-as-collectionid)
 1. harmonised data
+1. search / filtering capabilities
 
 Some of these are discussed below (rest is work in progress).
 
@@ -27,7 +28,7 @@ INSPIRE mandates that an entire dataset can be downloaded. How to do this in WFS
 ### CRS
 See [CRS](CRS.md)
 
-### Spatial dataset identifier as collectionId
+### Possible issue: spatial dataset identifier as collectionId
 The discussion paper mentions to use the Spatial dataset identifier as the collectionId. Currently, the Spatial Dataset identifier is very often a UUID. This would result in less easy to understand paths in the API.
 
 E.g. take a collection for Natura2000:
@@ -46,7 +47,7 @@ The Spatial dataset identifier is: ```4bbfdba2-7687-4393-9192-35ff89e6dfd0```. T
 ...
 ```
 
-**For discussion**: is this what the mapping should be?
+**For discussion**: is this what the mapping should be ideally (from an API user perspective)? And isn't this mapping wrong, because a dataset may contain multiple collections?
 
 ### Harmonised data
 Implementations that need to offer harmonised data, should also support GML as an encoding (because that is required for INSPIRE). OGC API Features accounts for all kinds of encodings, so from that point there is no issue. However, for querying / filtering the questiona arises how to do that on nested properties for example
