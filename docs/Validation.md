@@ -50,6 +50,7 @@ all Collections and do GetItem (limit=1) on each and check for some required att
 To test: 
 
 * go to https://demo.geohealthcheck.org
+* view [WFS3 Endpoints already added](https://demo.geohealthcheck.org/resources?lang=en&resource_type=OGC%3AWFS3)
 * register if you don't have an account, provide a valid email if you ever forget password
 * in Menu click `Add+|OGC API Features (WFS3)`
 * enter the top (root) WFS3 endpoint URL (NOT e.g. the /api), no parameters like `f=json` needed)
