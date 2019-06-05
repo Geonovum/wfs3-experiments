@@ -46,7 +46,7 @@ The same, but CRS: EPSG:28992 as output in GeoJSON (NOTE: in the HTTP request th
 
 [https://www.ldproxy.nrw.de/topographie/collections/ax_bahnverkehr/items?f=json&crs=http://www.opengis.net/def/crs/EPSG/0/28992](https://www.ldproxy.nrw.de/topographie/collections/ax_bahnverkehr/items?f=json&crs=http%3A%2F%2Fwww.opengis.net%2Fdef%2Fcrs%2FEPSG%2F0%2F28992)
 
-The output contains the CRS information encoded in GeoJSON:
+The output contains the CRS information encoded in GeoJSON (*TODO: is the crs notation valid?*):
 ```
 ...
 "timeStamp": "2019-06-05T11:12:35Z",
@@ -67,8 +67,6 @@ Example request, returns 2 items in the bbox (collection consists of 97 items):
 ## Samples for BGT
 *TODO*
 
-
-
 ## Possible issues and discussion points
 ### Alternate links and CRSes
 How to deal with alternate links in the ```/collections/{collectionId}/``` if multiple CRSes (and multiple encodings) are supported? Should every combination of CRS and encoding have a separate alternate link? Should there be no alternate links for CRSes? For transparency and discoverability of an API one could argue that there should be an alternate link for all combinations, but this may lead to too much combinations (possibly deterring developers)
@@ -76,3 +74,9 @@ How to deal with alternate links in the ```/collections/{collectionId}/``` if mu
 ### Alternatives for CRS parameters in request and response: use HTTP headers
 The Dutch API strategy describes a different apporach to request data in a specific CRS.
 [Dutch API Strategy on CRS negotiation (in Dutch)](https://docs.geostandaarden.nl/api/API-Strategie/#crs-negotiation)
+
+#### Disadvantage: clients need to be aware of Accept-Crs header
+**TODO : create a client that can handle the Accept-Crs header**
+
+### Notation of CRS in GeoJSON
+The old specification, describes a mechanism to include crs information in GeoJSON encoded data. See [https://geojson.org/geojson-spec.html#named-crs](https://geojson.org/geojson-spec.html#named-crs).
