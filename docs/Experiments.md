@@ -9,6 +9,7 @@ This document collects results of experiments performed during the "WFS3 werkwee
 * [Linked Data](LinkedData.md)
 * [INSPIRE Download Service](INSPIREDownloadService.md)
 * [Security](Security.md)
+* [Validation, Testing, Monitoring](Validation.md)
 * [Adding results](#adding-results)
 
 ## Adding results
