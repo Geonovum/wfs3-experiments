@@ -3,9 +3,7 @@ The core of the API specification only supports WGS84. Work has been done alread
 
 [CRS Extension OGC API Features](https://github.com/opengeospatial/WFS_FES/blob/master/extensions/crs/18-058.adoc)
 
-For NL we need RijksDriehoekstelsel,
-
-*TODO*
+For NL we need RijksDriehoekstelsel as CRS, because some data is mandated by law to provide geometry in that CRS. Othwerise OGC API Features may not be a good option to access some (formal) data.
 
 ## Sample implementations
 * LDProxy implementation, API doc: https://www.ldproxy.nrw.de/topographie?f=json. This document contains several CRSes:
@@ -35,7 +33,7 @@ For NL we need RijksDriehoekstelsel,
 ],
 ...
 ```
-* BGT, test services: EPSG:28992 (Work in progress):
+* BGT, test services: EPSG:28992 (Work in progress): *TODO*
 
 ### Sample requests including CRS, BBOX and BBOX-CRS
 #### All items
