@@ -19,15 +19,15 @@ Note that a server may still have a limit in a response.
 ### QGIS
 Support is limited. If the API provides GeoJSON, the data can easily be used / opened in QGIS as a Vector Layer. Because QGIS supports loading a remote dataset, like GeoJSON.
 
-*TODO: create simple screencast*
+[Basic screencast how to use QGIS for visualising data from OGC API Features](https://www.youtube.com/watch?v=-PTHglQlfLE&feature=youtu.be)
 
-Properly accessing the API is not available, like accessing the OpenAPI doc and using the paging mechanism.
+Properly accessing the API is not possible now, like accessing the OpenAPI doc and using the paging mechanism.
 
 ### NL Maps
 Question: what is the best way to use / consume OAF implementations?
 
 ## Custom applications
-* No tests done yet *
+*No tests done yet*
 
 ## Javascript: jQuery
-[The OAF / WFS3 test client](http://inspirelab.geonovum.nl/wfs3testclient/) uses jQuery to consume an API and display data on a Leaflet JS map. [Source code is available at Github](https://github.com/opengeogroep/ogc-api-features-testclient/).
+[The OAF / WFS3 test client](http://inspirelab.geonovum.nl/wfs3testclient/) uses jQuery to consume an API and display GeoJSON data on a Leaflet JS map. [Source code is available at Github](https://github.com/opengeogroep/ogc-api-features-testclient/).
