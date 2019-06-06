@@ -47,6 +47,8 @@ The Spatial dataset identifier is: ```4bbfdba2-7687-4393-9192-35ff89e6dfd0```. T
 ...
 ```
 
+The scenario changes a bit with the new metadata guideline, in here is suggested to use an uri as spatial dataset identifier, why not use the wfs3 path to the collection as identifier, would that satisfy the regulation?
+
 **For discussion**: is this what the mapping should be ideally (from an API user perspective)? And isn't this mapping wrong, because a dataset may contain multiple collections?
 
 ### Harmonised data
