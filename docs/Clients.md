@@ -26,6 +26,11 @@ Properly accessing the API is not possible now, like accessing the OpenAPI doc a
 ### NL Maps
 Question: what is the best way to use / consume OAF implementations?
 
+### GeoNetwork
+Implemented an early wfs3 client to facilitate data downloads from metadata advertising a wfs3 endpoint.
+Question: in some xslt cases we’d prefer to have the root and collections response encoded as xml, how does the service advertise that it supports that encoding, only via the api-yaml file? So we’d need to parse that file before connecting to the service (requires a parser for yet another encoding)?
+Question: what are the conventions to identify a link to external collection metadata between the other links?
+
 ## Custom applications
 *No tests done yet*
 
