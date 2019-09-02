@@ -31,6 +31,9 @@ Implemented an early wfs3 client to facilitate data downloads from metadata adve
 Question: in some xslt cases we’d prefer to have the root and collections response encoded as xml, how does the service advertise that it supports that encoding, only via the api-yaml file? So we’d need to parse that file before connecting to the service (requires a parser for yet another encoding)?
 Question: what are the conventions to identify a link to external collection metadata between the other links?
 
+### GDAL / OGR
+There is experimental support for WFS 3 in GDAL / OGR, a well-known and much used conversion/transformation library for many geospatial formats. See [the GDAL documentation on WFS3](https://gdal.org/drivers/vector/wfs3.html) for implementation details.
+
 ## Custom applications
 *No tests done yet*
 
