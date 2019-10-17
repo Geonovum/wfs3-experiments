@@ -1,8 +1,9 @@
 # WFS3 Experiments
-
 [![Join the chat at https://gitter.im/Geonovum/wfs3-experiments](https://badges.gitter.im/Geonovum/wfs3-experiments.svg)](https://gitter.im/Geonovum/wfs3-experiments?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This repository contains the results of the WFS3 experiments coming out of the "WFS3 werkweek", organised by Geonovum and PDOK in June 2019.
+
+** NOTE ** The results have been written down in a ReSpec document too. See the ```index.html``` file for the contents.
 
 ## Research topics
 See [docs/ResearchTopics.md](docs/ResearchTopics.md) for the list of research topics.
