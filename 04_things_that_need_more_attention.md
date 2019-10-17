@@ -6,7 +6,7 @@ The core of the OGC API Features specification does not support other CRSes than
 1. Should the CRS extension prescribe HTTP headers to negotiate CRSes?
 1. And specifically for GeoJSON output: what notation to use to advertise a specific CRS?
 
-Technical notes from the experiments: [(]CRS.md](https://github.com/Geonovum/wfs3-experiments/blob/master/docs/CRS.md).
+Technical notes from the experiments: [CRS.md](https://github.com/Geonovum/wfs3-experiments/blob/master/docs/CRS.md).
 
 ## Implementations of an API: more guidance
 Regarding an implementation of an API, there might be a need for more guidance for an implementor. Topics that could be useful to an implementor are:
