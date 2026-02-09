@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta content="text/html; charset=utf-8" http-equiv="content-type"><meta name="generator" content="ReSpec 24.5.2">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
+  <title>Lessons learned from Dutch WFS 3 experiments</title>
+  
+  
+<style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+#references :target {
+  background: #eaf3ff;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd>p:first-child {
+  margin-top: 0;
+}
+
+.section dd>p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary>ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details>* {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: 0.3em;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+details.respec-tests-details[open]>summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details>ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details>li {
+  padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-BASIS.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-BASIS",
+  "specType": "HR",
+  "pubDomain": "serv",
+  "shortName": "oapif",
+  "license": "cc-by-nd",
+  "doJsonLd": true,
+  "editors": [
+    {
+      "name": "Thijs Brentjens",
+      "company": "Geonovum",
+      "companyURL": "http://www.geonovum.nl/"
+    },
+    {
+      "name": "Participants experiments",
+      "companyURL": "http://www.geonovum.nl/"
+    }
+  ],
+  "github": "https://github.com/Geonovum/wfs3-experiments",
+  "issueBase": "https://github.com/Geonovum/wfs3-experiments/issues/",
+  "format": "markdown",
+  "localBiblio": {
+    "OAPIF": {
+      "href": "https://www.opengeospatial.org/standards/ogcapi-features",
+      "title": "Basismodel Geo-informatie - Termen, definities, relaties en algemene regels voor de uitwisseling van informatie over aan de aarde gerelateerde ruimtelijke objecten",
+      "authors": [
+        "Clemens Portele",
+        "Panagiotis (Peter) A. Vretanos",
+        "Charles Heazel"
+      ],
+      "date": "2019-10-14",
+      "publisher": "Open Geospatial Consortium"
+    }
+  },
+  "publishISODate": "2026-02-09T00:00:00.000Z",
+  "generatedSubtitle": "Document 09 februari 2026"
+}</script><meta name="description" content="In the first week of June 2019 PDOK and Geonovum organized a week of experiments on WFS 3 (formally called OGC API Features now), called (in Dutch): “WFS 3 werkweek”. The goal of this week was to acquire and share knowledge and experiences on WFS 3. Several Dutch organizations participated in the experiments and closing session."><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "en",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://docs.geostandaarden.nl/serv/basis-hr-oapif-20260209/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "Lessons learned from Dutch WFS 3 experiments",
+  "inLanguage": "en",
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+  "datePublished": "2026-02-09",
+  "copyrightHolder": {
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "discussionUrl": "https://github.com/Geonovum/wfs3-experiments/issues/",
+  "alternativeHeadline": "",
+  "description": "In the first week of June 2019 PDOK and Geonovum organized a week of experiments on WFS 3 (formally called OGC API Features now), called (in Dutch): “WFS 3 werkweek”. The goal of this week was to acquire and share knowledge and experiences on WFS 3. Several Dutch organizations participated in the experiments and closing session.",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "Thijs Brentjens",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "http://www.geonovum.nl/"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Participants experiments",
+      "worksFor": {
+        "url": "http://www.geonovum.nl/"
+      }
+    }
+  ],
+  "citation": []
+}</script></head>
+
+<body class="h-entry toc-inline"><div class="head">
+  <a href="https://www.geonovum.nl/" class="logo"><img id="Geonovum" alt="Geonovum" width="132" height="67" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg"></a>
+  <h1 class="title p-name" id="title">Lessons learned from Dutch WFS 3 experiments</h1>
+  
+  <h2>Geonovum Handreiking<br>
+  Document <time class="dt-published" datetime="2026-02-09">09 februari 2026</time></h2>
+  <dl>
+    <dt>This version:</dt><dd><a class="u-url" href="https://docs.geostandaarden.nl/serv/basis-hr-oapif-20260209/">https://docs.geostandaarden.nl/serv/basis-hr-oapif-20260209/</a></dd><dt>Latest published version:</dt><dd>geen</dd>
+    
+    
+    <dt>Latest editor's draft:</dt><dd><a href="https://geonovum.github.io/wfs3-experiments/">https://geonovum.github.io/wfs3-experiments/</a></dd>
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard"><span class="p-name fn">Thijs Brentjens</span>, <a class="p-org org h-org h-card" href="http://www.geonovum.nl/">Geonovum</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Participants experiments</span></dd>
+    
+    <dt>Participate:</dt><dd>
+      <a href="https://github.com/Geonovum/wfs3-experiments/">GitHub Geonovum/wfs3-experiments</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/wfs3-experiments/issues/">File a bug</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/wfs3-experiments/commits/gh-pages">Commit history</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/wfs3-experiments/pulls/">Pull requests</a>
+    </dd>
+  </dl>
+  
+  
+    <dl>
+          <dt>Rechtenbeleid:</dt>
+          <dd>
+            <div class="copyright" style="margin: 0.25em 0;">
+              <abbr title="Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal">
+              <a href="https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl"><img width="115" height="40" src="https://tools.geostandaarden.nl/respec/style/logos/cc-by-nd.svg" alt="Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal"></a>
+            </abbr>
+              <div style="display:inline-block; vertical-align:top">
+                <p style="font-size: small;">Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal<br>(CC-BY-ND)</p>
+              </div>
+            </div>
+          </dd>
+        </dl>
+  <hr title="Separator for header">
+</div><section id="abstract" class="introductory"><h2>Abstract</h2><p>
+In the first week of June 2019 PDOK and Geonovum organized a week of experiments on WFS 3 (formally called OGC API Features now), called (in Dutch): “WFS 3 werkweek”. The goal of this week was to acquire and share knowledge and experiences on WFS 3. Several Dutch organizations participated in the experiments and closing session.
+</p><p>
+This document summarizes the lessons learned from this week: what works well, what is unclear or work to be done and what (possible) issues have been identified when working with OGC API Features.
+</p></section><section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
+    <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current Geonovum publications and the latest revision of this document can be found via <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>(in Dutch).</em>
+  </p><p>
+
+
+
+
+
+    Dit is een document zonder officiële status.
+
+
+
+
+</p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#setup-of-the-week"><span class="secno">1. </span>Setup of the week</a></li><li class="tocline"><a class="tocxref" href="#things-that-work-well"><span class="secno">2. </span>Things that work well</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#creation-of-an-api"><span class="secno">2.1 </span>Creation of an API</a></li><li class="tocline"><a class="tocxref" href="#accessing-an-api"><span class="secno">2.2 </span>Accessing an API</a></li><li class="tocline"><a class="tocxref" href="#discoverability-of-apis-and-datasets"><span class="secno">2.3 </span>Discoverability of APIs and datasets</a></li><li class="tocline"><a class="tocxref" href="#testing-and-validation"><span class="secno">2.4 </span>Testing and validation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#unfinished-business"><span class="secno">3. </span>Unfinished business</a></li><li class="tocline"><a class="tocxref" href="#things-that-need-more-attention-don-t-work-well-yet"><span class="secno">4. </span>Things that need more attention / don’t work well yet</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#specification-crs-support"><span class="secno">4.1 </span>Specification: CRS support</a></li><li class="tocline"><a class="tocxref" href="#implementations-of-an-api-more-guidance"><span class="secno">4.2 </span>Implementations of an API: more guidance</a></li><li class="tocline"><a class="tocxref" href="#clients"><span class="secno">4.3 </span>Clients</a></li></ol></li><li class="tocline"><a class="tocxref" href="#further-reading"><span class="secno">5. </span>Further reading</a></li></ol></nav><section data-format="markdown" id="setup-of-the-week"><!--OddPage--><h2 id="x1-setup-of-the-week"><span class="secno">1. </span>Setup of the week</h2><p>The experiments started on Monday morning with a webinar on WFS 3 / OGC API Features and information on the workweek. After the webinar, interested participants could (remotely) start with the experiments they favored. During the week people from PDOK / Dutch Kadaster and Geonovum worked on their own implementations and supported others with their experiments through Github and Gitter. On Thursday morning an integration session / more technical with a smaller group was held. In the afternoon an (open) seminar in Utrecht was held (around 50 attendees), to share knowledge about WFS 3, showcase implementations of all participants and discuss experiences.</p></section><section data-format="markdown" id="things-that-work-well"><!--OddPage--><h2 id="x2-things-that-work-well"><span class="secno">2. </span>Things that work well</h2><p>The participants identified the following things that work well.</p><section id="creation-of-an-api"><h3 id="x2-1-creation-of-an-api"><span class="secno">2.1 </span>Creation of an API</h3><p>There is some software available (also open source) to offer an OGC API Features instance on a dataset. The software is all quite new, but implementation of the basics seems to be okay. Using existing software, it is quite straightforward to offer an API, depending on the technical skills of the developer. As an example, 4 WFS 3.0 services / OGC API Features API implementations with Dutch test data in (in 2 CRSes) have been created during this week.</p><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/APIimplementations.md">APIimplementations.md</a>.</p></section><section id="accessing-an-api"><h3 id="x2-2-accessing-an-api"><span class="secno">2.2 </span>Accessing an API</h3><p>Accessing an API and consuming data using custom code is straightforward. Also the possibility to browse through data in a web browser is considered useful when assessing the data and API for it’s usefulness. Experiences are very positive. A basic demonstration client has been created, with just some lines of code. Accessing an API from an existing tool has been done easily as well.</p><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/Clients.md">Clients.md</a>.</p></section><section id="discoverability-of-apis-and-datasets"><h3 id="x2-3-discoverability-of-apis-and-datasets"><span class="secno">2.3 </span>Discoverability of APIs and datasets</h3><p>If the HTML pages of an API are setup correctly (for example annotated with Schema.org markup), search engines can easily index the API and the dataset the API offers. This way datasets and their APIs can be discovered using common search engines. Even individual items from the API are found.</p><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/Search.md">Search.md</a>.</p></section><section id="testing-and-validation"><h3 id="x2-4-testing-and-validation"><span class="secno">2.4 </span>Testing and validation</h3><p>Although the specification is new, there are some test and validation tools available already:</p><ul>
+<li>a generic OpenAPI document validator</li>
+<li>a test client for basic manual testing / inspection if an API is funtioning</li>
+<li>a monitoring tool (GeoHealthCheck) to monitor uptime and availability.</li>
+</ul><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/Validation.md">Validation.md</a>.</p></section></section><section data-format="markdown" id="unfinished-business"><!--OddPage--><h2 id="x3-unfinished-business"><span class="secno">3. </span>Unfinished business</h2><p>The topics below have not been (fully) researched yet, but are considered relevant:</p><ol>
+<li>INSPIRE and OGC API Features: in general, most INSPIRE requirements could be fulfilled with OGC API Features. There are some (potential) issues to resolve, in the OGC spec, but also in the INSPIRE discussion paper. For example: CRS support, multilingual support and how to deal with the download of an entire dataset. See the <a href="https://geonovum.github.io/wfs3-experiments/docs/INSPIREDownloadService.html">details of a first assessment</a>.</li>
+<li>Linked Data: to support linked data as output from a OGC API Features implementation, JSON-LD seems promising. A first example has been found. How to provide useful linked data and what should / could be part of the OGC API Features spec (in an extension probably), is still to be determined.</li>
+<li>Security has not been addressed yet</li>
+<li>how OGC API Features compares to the <a href="https://docs.geostandaarden.nl/api/API-Strategie/">Dutch API Strategy</a> has not been addressed yet.</li>
+</ol></section><section data-format="markdown" id="things-that-need-more-attention-don-t-work-well-yet"><!--OddPage--><h2 id="x4-things-that-need-more-attention-don-t-work-well-yet"><span class="secno">4. </span>Things that need more attention / don’t work well yet</h2><section id="specification-crs-support"><h3 id="x4-1-specification-crs-support"><span class="secno">4.1 </span>Specification: CRS support</h3><p>The core of the OGC API Features specification does not support other CRSes than WGS84. In an extension support for other CRSes will be addressed. During the experiments, these topics were mentioned that need to be addressed:</p><ol>
+<li>Alternate links and CRSes. How to deal with alternate links in the /collections/{collectionId}/ if multiple CRSes (and multiple encodings) are supported?</li>
+<li>Should the CRS extension prescribe HTTP headers to negotiate CRSes?</li>
+<li>And specifically for GeoJSON output: what notation to use to advertise a specific CRS?</li>
+</ol><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/CRS.md">CRS.md</a>.</p></section><section id="implementations-of-an-api-more-guidance"><h3 id="x4-2-implementations-of-an-api-more-guidance"><span class="secno">4.2 </span>Implementations of an API: more guidance</h3><p>Regarding an implementation of an API, there might be a need for more guidance for an implementor. Topics that could be useful to an implementor are:</p><ol>
+<li><em>dealing with limits</em> for the number of features: what is a useful limit, considering the source data and it’s use?</li>
+<li>if <em>other CRSes</em> are to be supported, how should this be done exactly? And specifically for GeoJSON output: what notation to use to advertise a specific CRS?</li>
+<li><em>documentation</em>: just providing an OpenAPI document and metadata might not be enough for third-party developers / users. Consider extra documentation, for example a getting started, documentation on the data in the API, what kind of filtering could be useful on the data etc. Include (working) examples when possible. See <a href="https://docs.geostandaarden.nl/api/API-Strategie/#inspelen-op-gebruikerswensen-de-sleutel-tot-gebruik">Chapter 3. of Kennisplatform APIs documentation on user/developer experience (in Dutch)</a></li>
+<li><em>identifiers</em>: determine what would be the best approach for identifiers: which attribute of the source data is the best item identifier. Also think of using URIs, "local" identifiers.</li>
+<li><em>convenience operations / requests</em>: in addition to default OGC API Features, other types of requests could be very useful. For example: for bulk downloads of all data in the API or a specific collection, one could create pre-generated files containing all data in a suitable format (e.g.: in GeoPackage format) and add an endpoint for that (/collections/{collectionId}/download) . Or for certain much used filters, provide a separate endpoint/operation (e.g.: get the item(s) closest to a specific location, then an operation like /closeby?lon=...&amp;lat=... could be useful).</li>
+</ol><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/APIimplementations.md">APIimplementations.md</a>.</p></section><section id="clients"><h3 id="x4-3-clients"><span class="secno">4.3 </span>Clients</h3><p>Regarding <em>generic geospatial clients</em> support to access an API is very limited. While accessing an API and consuming data using custom code is straightforward, only just a few generic geospatial clients (desktop software, webbased clients and libraries) support OGC API Features. And what is supported, is mostly experimental. Data can be used in a bit more cases though, using some “tricks”.</p><p>Technical notes from the experiments: <a href="https://github.com/Geonovum/wfs3-experiments/blob/master/docs/Clients.md">Clients.md</a>.</p></section></section><section data-format="markdown" id="further-reading"><!--OddPage--><h2 id="x5-further-reading"><span class="secno">5. </span>Further reading</h2><p>A list of the experiments conducted, with details, can be found on Github <a href="https://geonovum.github.io/wfs3-experiments/docs/Experiments.html">https://geonovum.github.io/wfs3-experiments/docs/Experiments.html</a></p></section><p role="navigation" id="back-to-top"><a href="#title">
+  <abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
