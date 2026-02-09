@@ -1,3 +1,11 @@
+
+⚠️ Deze repository is automatisch bijgewerkt naar de nieuwste workflow.
+Voor vragen, neem contact op met [Linda van den Brink](mailto:l.vandenbrink@geonovum.nl) of [Wilko Quak](mailto:w.quak@geonovum.nl).
+
+Als je een nieuwe publicatie wilt starten, lees dan eerst de instructies in de README van de NL-ReSpec-template:
+[https://github.com/Geonovum/NL-ReSpec-template](https://github.com/Geonovum/NL-ReSpec-template).
+
+
 # WFS3 Experiments
 [![Join the chat at https://gitter.im/Geonovum/wfs3-experiments](https://badges.gitter.im/Geonovum/wfs3-experiments.svg)](https://gitter.im/Geonovum/wfs3-experiments?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
