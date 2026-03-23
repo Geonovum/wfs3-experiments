@@ -1,1 +1,25 @@
-{"error":"WCAG-check mislukt (axe-cli). Zie logs voor details."}
+[
+  {
+    "url": "http://localhost:8080/snapshot.html",
+    "id": "link-name",
+    "impact": "serious",
+    "description": "Ensure links have discernible text",
+    "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=webdriverjs",
+    "nodes": [
+      {
+        "target": [
+          "#toc-jump"
+        ],
+        "html": "<a id=\"toc-jump\" href=\"#toc\"><span aria-hidden=\"true\">↑</span> <span>Jump to Table of Contents</span></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      },
+      {
+        "target": [
+          "#toc-toggle"
+        ],
+        "html": "<a id=\"toc-toggle\" href=\"#toc\"><span aria-hidden=\"true\">→</span> <span>Pop Out Sidebar</span></a>",
+        "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+      }
+    ]
+  }
+]
